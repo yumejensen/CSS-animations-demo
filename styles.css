@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(239, 225, 165);
+    margin: 40px
+}
+
+
+@keyframes testAnim {
+    from {background-color: red;}
+    to {background-color: rgb(49, 43, 226);}
+}
+
+#test {
+  width: 150px;
+  height: 150px;
+  animation-name: testAnim;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes testAnim2 {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+
+#test2 {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(33, 185, 71);
+}
+
+#test2:hover {
+  animation-name: testAnim2;
+  animation-duration: 2s;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+}
