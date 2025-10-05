@@ -1,8 +1,10 @@
+/* whole page */
 body {
-    background-color: rgb(239, 225, 165);
+    background-color: rgb(238, 205, 128);
     margin: 40px
 }
 
+/* container that holds all the boxes */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -10,22 +12,29 @@ body {
     gap: 70px;
 }
 
-@keyframes testAnim {
-    from {background-color: red;}
-    to {background-color: rgb(49, 43, 226);}
+/* color shift back and forth */
+@keyframes colorShift {
+    from {background-color: rgb(255, 64, 0);}
+    to {background-color: rgb(12, 151, 189);}
 }
 
-#test {
+#test1 {
   width: 150px;
   height: 150px;
-  animation-name: testAnim;
-  animation-duration: 2s;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: white;
+  position: relative;
+
+  animation-name: colorShift;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-
-@keyframes testAnim2 {
+/* rotate counter clockwise */
+@keyframes rotateLeft {
     from {transform: rotate(0);}
     to {transform: rotate(360deg);}
 }
@@ -33,42 +42,94 @@ body {
 #test2 {
   width: 150px;
   height: 150px;
-  background-color: rgb(33, 185, 71);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+
+  background-color: rgb(16, 163, 53);
 }
 
 #test2:hover {
-  animation-name: testAnim2;
+  animation-name: rotateLeft;
   animation-duration: 2s;
   animation-direction: reverse;
   animation-iteration-count: infinite;
 }
 
-@keyframes testAnim3 {
-  0%   {background-color:red; left:0px; top:0px;}
+/* move in a square to the right + color shift */
+@keyframes moveSquareColor {
+  0%   {background-color:rgb(255, 0, 187); left:0px; top:0px;}
   25%  {background-color:yellow; left:200px; top:0px;}
   50%  {background-color:blue; left:200px; top:200px;}
   75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
+  100% {background-color:rgb(255, 0, 187); left:0px; top:0px;}
 }
 
-@keyframes myAnimation {
+/* just move in a square to the right */
+@keyframes moveSquare {
   0%   {left:0px; top:0px;}
-  25%  {left:200px; top:0px;}
-  50%  {left:200px; top:200px;}
-  75%  {left:0px; top:200px;}
+  25%  {left:100px; top:0px;}
+  50%  {left:100px; top:100px;}
+  75%  {left:0px; top:100px;}
   100% {left:0px; top:0px;}
 }
 
 #test3 {
   width: 150px;
   height: 150px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
   position: relative;
-  background-color: rgb(255, 0, 187);
+
+  background-color: rgb(255, 0, 81);
 }
 
 #test3:active {
-  background-color: rgb(255, 0, 187);
-  animation-name: myAnimation;
-  animation-duration: 3s;
+  animation-name: moveSquare;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
+}
+
+/* go down + rotate right on the way up */
+@keyframes upAndDown {
+  0%   {left:0px; top:0px;}
+  50%  {left:0px; top:250px; transform: rotate(0); background-color: rgb(212, 0, 184);}
+  100% {left:0px; top:0px; transform: rotate(360deg); background-color: rgb(62, 23, 238);}
+}
+
+#test4 {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+
+  background-color: rgb(62, 23, 238);
+}
+
+
+#test4:active {
+  width: 150px;
+  height: 150px;
+  animation-name: upAndDown;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#test5 {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+
+  background-color: rgb(255, 162, 0);
 }
