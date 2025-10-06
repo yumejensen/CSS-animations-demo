@@ -126,6 +126,11 @@ body {
   animation-iteration-count: infinite;
 }
 
+@keyframes squish {
+  from {transform: scale(1, 1);}
+  to {transform: scale(1.2, 0.8);}
+}
+
 #test5 {
   width: 150px;
   height: 150px;
@@ -137,4 +142,8 @@ body {
   position: relative;
 
   background-color: rgb(255, 162, 0);
+  animation-name: squish;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
