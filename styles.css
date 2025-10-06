@@ -61,6 +61,12 @@ body {
   animation-name: rotateLeft;
   animation-duration: 2s;
   animation-direction: reverse;
+
+  /*bouncy movement*/
+ animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  /*moves constant speed like linear*/
+  animation-timing-function: cubic-bezier(0, 0, 1, 1);
+
   animation-iteration-count: infinite;
 }
 
