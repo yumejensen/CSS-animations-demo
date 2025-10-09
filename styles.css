@@ -65,17 +65,17 @@ body {
 
   /*MOVEMENT OPTIONS*/
 
-  /* steps - choppy */
-  animation-timing-function: steps(10);
-  /* linear movement - same as cubic bezier(0, 0, 1, 1) */
-  animation-timing-function: linear; 
-  /* ease in - same as cubic-bezier(0.42, 0, 1.0, 1.0)*/
-  animation-timing-function: ease-in;
-  /* ease out - same as cubic bezier(0, 0, 0.58, 1.0)*/
-  animation-timing-function: ease-out;
   
   /* ease - the default, same as cubic-bezier(0.25, 0.1, 0.25, 1.0)*/
   animation-timing-function: ease;
+  /* linear movement - same as cubic bezier(0, 0, 1, 1) */
+  animation-timing-function: linear; 
+  /* steps - choppy */
+  animation-timing-function: steps(5);
+  /* ease out - same as cubic bezier(0, 0, 0.58, 1.0)*/
+  animation-timing-function: ease-out;
+  /* ease in - same as cubic-bezier(0.42, 0, 1.0, 1.0)*/
+  animation-timing-function: ease-in;
 }
 
 
@@ -118,7 +118,7 @@ body {
   
   /*MOVEMENT OPTIONS*/
   /*bouncy movement option */
-  /* animation-timing-function: cubic-bezier(0.1, -0.8, 0.9, 0); */
+  animation-timing-function: cubic-bezier(0.1, -0.8, 0.9, 0);
 }
 
 
