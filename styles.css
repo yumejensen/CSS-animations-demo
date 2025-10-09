@@ -61,13 +61,21 @@ body {
   animation-name: rotateLeft;
   animation-duration: 2s;
   animation-direction: reverse;
-
-  /*bouncy movement*/
- animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
-  /*moves constant speed like linear*/
-  animation-timing-function: cubic-bezier(0, 0, 1, 1);
-
   animation-iteration-count: infinite;
+
+  /*MOVEMENT OPTIONS*/
+
+  /* steps - choppy */
+  animation-timing-function: steps(10);
+  /* linear movement - same as cubic bezier(0, 0, 1, 1) */
+  animation-timing-function: linear; 
+  /* ease in - same as cubic-bezier(0.42, 0, 1.0, 1.0)*/
+  animation-timing-function: ease-in;
+  /* ease out - same as cubic bezier(0, 0, 0.58, 1.0)*/
+  animation-timing-function: ease-out;
+  
+  /* ease - the default, same as cubic-bezier(0.25, 0.1, 0.25, 1.0)*/
+  animation-timing-function: ease;
 }
 
 
@@ -107,6 +115,10 @@ body {
   animation-name: moveSquare;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  
+  /*MOVEMENT OPTIONS*/
+  /*bouncy movement option */
+  /* animation-timing-function: cubic-bezier(0.1, -0.8, 0.9, 0); */
 }
 
 
